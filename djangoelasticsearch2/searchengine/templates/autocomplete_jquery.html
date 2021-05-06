@@ -1,0 +1,85 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Autocomplete - Default functionality</title>
+
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url: "{% url 'searchengine:autocomplete_query' %}",
+                type: 'GET',
+                dataType: 'json',
+                beforeSend: () => {
+                },
+                success: (data) => {
+                    // Source:
+                    // https://api.jqueryui.com/autocomplete/
+                    // https://www.encodedna.com/jquery/how-to-highlight-input-words-using-jqueryui-autocomplete-widget.htm
+                    // let par = JSON.parse(data); 
+                    let countries = data.context.b;
+                    let z = JSON.stringify(countries, null, 2)
+                    $("#tags").autocomplete({
+                        source: function (request, response) {
+                            let results = $.ui.autocomplete.filter(countries, request.term);
+                            response(results.slice(0, 10));
+                        },
+                        delay: 0,
+                        minLength: 0,
+                        scroll: true
+                    }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                        let txt = String(item.value).replace(new RegExp(this.term, "gi"), "<b>$&</b>");
+                        return $("<li></li>")
+                            .data("ui-autocomplete-item", item)
+                            .append("<a>" + txt + "</a>")
+                            .appendTo(ul);
+                    };
+                },
+                complete: (data) => {
+
+                },
+                error: (data) => {
+
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="ui-widget">
+        <form action="" method="get">
+            <label for="tags">Tags: </label>
+            <input id="tags" name="q" value="{{request.GET.q}}">
+            <input type="submit" value="search">
+        </form>
+
+    </div>
+
+    <div>
+        {% for r in results %}
+        <ul>
+            <li>Email: {{ r.email }}</li>
+            <li>Name: {{ r.name }}</li>
+            <li>PostId: {{ r.postId }}</li>
+            <li>Body: {{ r.body }}</li>
+        </ul>
+        <hr>
+        {% empty %}
+        <h1>No Records!</h1>
+        {% endfor %}
+    </div>
+
+
+</body>
+
+</html>

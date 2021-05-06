@@ -1,0 +1,23 @@
+[2021-05-04 15:10:23,086][INFO ][node                     ] [Royal Roy] version[2.4.2], pid[19580], build[161c65a/2016-11-17T11:51:03Z]
+[2021-05-04 15:10:23,089][INFO ][node                     ] [Royal Roy] initializing ...
+[2021-05-04 15:10:23,805][INFO ][plugins                  ] [Royal Roy] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2021-05-04 15:10:23,844][INFO ][env                      ] [Royal Roy] using [1] data paths, mounts [[(D:)]], net usable_space [244.3gb], net total_space [931.5gb], spins? [unknown], types [NTFS]
+[2021-05-04 15:10:23,845][INFO ][env                      ] [Royal Roy] heap size [989.8mb], compressed ordinary object pointers [true]
+[2021-05-04 15:10:27,227][INFO ][node                     ] [Royal Roy] initialized
+[2021-05-04 15:10:27,228][INFO ][node                     ] [Royal Roy] starting ...
+[2021-05-04 15:10:28,232][INFO ][transport                ] [Royal Roy] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2021-05-04 15:10:28,238][INFO ][discovery                ] [Royal Roy] elasticsearch/wN8r36noRyeGcgrYM-fjEw
+[2021-05-04 15:10:32,820][INFO ][cluster.service          ] [Royal Roy] new_master {Royal Roy}{wN8r36noRyeGcgrYM-fjEw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2021-05-04 15:10:33,097][INFO ][gateway                  ] [Royal Roy] recovered [1] indices into cluster_state
+[2021-05-04 15:10:33,792][INFO ][http                     ] [Royal Roy] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2021-05-04 15:10:33,792][INFO ][node                     ] [Royal Roy] started
+[2021-05-04 15:10:34,017][INFO ][cluster.routing.allocation] [Royal Roy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[haystack][1]] ...]).
+[2021-05-04 16:38:17,503][INFO ][cluster.metadata         ] [Royal Roy] [haystack] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2021-05-04 16:38:17,656][INFO ][cluster.metadata         ] [Royal Roy] [haystack] create_mapping [modelresult]
+[2021-05-04 16:38:18,118][INFO ][cluster.metadata         ] [Royal Roy] [haystack] update_mapping [modelresult]
+[2021-05-04 16:38:18,162][INFO ][cluster.routing.allocation] [Royal Roy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[haystack][4], [haystack][4]] ...]).
+[2021-05-04 17:05:41,265][INFO ][bootstrap                ] running graceful exit on windows
+[2021-05-04 17:05:41,266][INFO ][node                     ] [Royal Roy] stopping ...
+[2021-05-04 17:05:42,774][INFO ][node                     ] [Royal Roy] stopped
+[2021-05-04 17:05:42,775][INFO ][node                     ] [Royal Roy] closing ...
+[2021-05-04 17:05:42,778][INFO ][node                     ] [Royal Roy] closed

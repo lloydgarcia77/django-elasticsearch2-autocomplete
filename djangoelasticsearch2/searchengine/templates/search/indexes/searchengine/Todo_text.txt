@@ -1,0 +1,4 @@
+{{object.user_id}}
+{{object.tid}}
+{{object.title}}
+{{object.completed}} 

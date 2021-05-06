@@ -1,0 +1,19 @@
+[2021-05-06 08:39:45,872][INFO ][node                     ] [Tommy] version[2.4.2], pid[2176], build[161c65a/2016-11-17T11:51:03Z]
+[2021-05-06 08:39:45,875][INFO ][node                     ] [Tommy] initializing ...
+[2021-05-06 08:39:46,793][INFO ][plugins                  ] [Tommy] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2021-05-06 08:39:46,850][INFO ][env                      ] [Tommy] using [1] data paths, mounts [[(D:)]], net usable_space [244.2gb], net total_space [931.5gb], spins? [unknown], types [NTFS]
+[2021-05-06 08:39:46,850][INFO ][env                      ] [Tommy] heap size [989.8mb], compressed ordinary object pointers [true]
+[2021-05-06 08:39:50,517][INFO ][node                     ] [Tommy] initialized
+[2021-05-06 08:39:50,518][INFO ][node                     ] [Tommy] starting ...
+[2021-05-06 08:39:51,508][INFO ][transport                ] [Tommy] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2021-05-06 08:39:51,522][INFO ][discovery                ] [Tommy] elasticsearch/AhfyelUiQeGSrcMZCH7mdQ
+[2021-05-06 08:39:56,172][INFO ][cluster.service          ] [Tommy] new_master {Tommy}{AhfyelUiQeGSrcMZCH7mdQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2021-05-06 08:39:56,305][INFO ][gateway                  ] [Tommy] recovered [1] indices into cluster_state
+[2021-05-06 08:39:57,063][INFO ][http                     ] [Tommy] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2021-05-06 08:39:57,063][INFO ][node                     ] [Tommy] started
+[2021-05-06 08:39:57,216][INFO ][cluster.routing.allocation] [Tommy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[haystack][0]] ...]).
+[2021-05-06 14:30:28,727][INFO ][bootstrap                ] running graceful exit on windows
+[2021-05-06 14:30:28,729][INFO ][node                     ] [Tommy] stopping ...
+[2021-05-06 14:30:28,924][INFO ][node                     ] [Tommy] stopped
+[2021-05-06 14:30:28,924][INFO ][node                     ] [Tommy] closing ...
+[2021-05-06 14:30:28,932][INFO ][node                     ] [Tommy] closed

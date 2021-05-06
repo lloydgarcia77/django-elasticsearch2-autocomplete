@@ -1,0 +1,3 @@
+{{object.email}}
+{{object.name}}
+{{object.postId}}
