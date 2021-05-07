@@ -5,3 +5,4 @@ from searchengine import models
 
 admin.site.register(models.Comments)
 admin.site.register(models.Todo)
+admin.site.register(models.PersonalInfo)

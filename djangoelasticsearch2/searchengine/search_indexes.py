@@ -1,4 +1,4 @@
-from searchengine.models import Comments, Todo
+from searchengine.models import Comments, Todo, PersonalInfo
 from haystack import indexes
 
 class CommentsIndex(indexes.SearchIndex, indexes.Indexable):
@@ -24,6 +24,21 @@ class TodoIndex(indexes.SearchIndex, indexes.Indexable):
 
     def get_model(self):
         return Todo
+    
+    def index_queryset(self, using=None):
+        return self.get_model().objects.all()
+
+
+class PersonalInfoIndex(indexes.SearchIndex, indexes.Indexable):
+    text = indexes.EdgeNgramField(document=True, use_template=True)
+    first_name = indexes.CharField(model_attr='first_name')
+    last_name = indexes.CharField(model_attr='last_name')
+    email = indexes.CharField(model_attr='email')
+    gender = indexes.CharField(model_attr='gender')
+    company = indexes.CharField(model_attr='company')
+
+    def get_model(self):
+        return PersonalInfo
     
     def index_queryset(self, using=None):
         return self.get_model().objects.all()
