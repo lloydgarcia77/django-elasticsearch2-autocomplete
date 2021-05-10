@@ -220,14 +220,31 @@
 
         <div class="center">
             <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#" class="active">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
+                {% if results.has_previous %} 
+                <a href="{{base_url}}&page=1">&laquo;</a>
+                <a href="{{base_url}}&page={{ results.previous_page_number }}">&#60;</a>
+                {% endif %}
+
+                {% if results.number|add:'-4' > 1%}
+                <a href="{{base_url}}&page={{ results.number|add:'-5' }}">&hellip;</a>
+                {% endif %}
+
+                {% for page in results.paginator.page_range %}
+                    {% if results.number == page %}
+                        <a href="{{base_url}}&page={{ page }}" class="active">{{ page }}</a> 
+                    {% elif page > results.number|add:'-5' and page < results.number|add:'5' %}
+                        <a href="{{base_url}}&page={{ page }}">{{ page }}</a> 
+                    {% endif %}
+                {% endfor %}
+
+                {% if results.number|add:'4' < results.paginator.num_pages %}
+                    <a href="{{base_url}}&page={{ results.number|add:'5' }}">&hellip;</a> 
+                {% endif %}
+
+                {% if results.has_next %} 
+                    <a href="{{base_url}}&page={{ results.next_page_number }}">&#62;</a>
+                    <a href="{{base_url}}&page={{ results.paginator.num_pages }}">&raquo;</a>
+                {% endif %} 
             </div>
         </div>
 

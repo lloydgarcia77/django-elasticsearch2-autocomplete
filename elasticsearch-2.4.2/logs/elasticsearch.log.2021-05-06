@@ -1,0 +1,38 @@
+[2021-05-06 08:39:45,872][INFO ][node                     ] [Tommy] version[2.4.2], pid[2176], build[161c65a/2016-11-17T11:51:03Z]
+[2021-05-06 08:39:45,875][INFO ][node                     ] [Tommy] initializing ...
+[2021-05-06 08:39:46,793][INFO ][plugins                  ] [Tommy] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2021-05-06 08:39:46,850][INFO ][env                      ] [Tommy] using [1] data paths, mounts [[(D:)]], net usable_space [244.2gb], net total_space [931.5gb], spins? [unknown], types [NTFS]
+[2021-05-06 08:39:46,850][INFO ][env                      ] [Tommy] heap size [989.8mb], compressed ordinary object pointers [true]
+[2021-05-06 08:39:50,517][INFO ][node                     ] [Tommy] initialized
+[2021-05-06 08:39:50,518][INFO ][node                     ] [Tommy] starting ...
+[2021-05-06 08:39:51,508][INFO ][transport                ] [Tommy] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2021-05-06 08:39:51,522][INFO ][discovery                ] [Tommy] elasticsearch/AhfyelUiQeGSrcMZCH7mdQ
+[2021-05-06 08:39:56,172][INFO ][cluster.service          ] [Tommy] new_master {Tommy}{AhfyelUiQeGSrcMZCH7mdQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2021-05-06 08:39:56,305][INFO ][gateway                  ] [Tommy] recovered [1] indices into cluster_state
+[2021-05-06 08:39:57,063][INFO ][http                     ] [Tommy] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2021-05-06 08:39:57,063][INFO ][node                     ] [Tommy] started
+[2021-05-06 08:39:57,216][INFO ][cluster.routing.allocation] [Tommy] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[haystack][0]] ...]).
+[2021-05-06 14:30:28,727][INFO ][bootstrap                ] running graceful exit on windows
+[2021-05-06 14:30:28,729][INFO ][node                     ] [Tommy] stopping ...
+[2021-05-06 14:30:28,924][INFO ][node                     ] [Tommy] stopped
+[2021-05-06 14:30:28,924][INFO ][node                     ] [Tommy] closing ...
+[2021-05-06 14:30:28,932][INFO ][node                     ] [Tommy] closed
+[2021-05-06 14:34:21,847][INFO ][node                     ] [Vampire by Night] version[2.4.2], pid[4380], build[161c65a/2016-11-17T11:51:03Z]
+[2021-05-06 14:34:21,848][INFO ][node                     ] [Vampire by Night] initializing ...
+[2021-05-06 14:34:22,509][INFO ][plugins                  ] [Vampire by Night] modules [reindex, lang-expression, lang-groovy], plugins [], sites []
+[2021-05-06 14:34:22,536][INFO ][env                      ] [Vampire by Night] using [1] data paths, mounts [[(D:)]], net usable_space [244.2gb], net total_space [931.5gb], spins? [unknown], types [NTFS]
+[2021-05-06 14:34:22,537][INFO ][env                      ] [Vampire by Night] heap size [989.8mb], compressed ordinary object pointers [true]
+[2021-05-06 14:34:24,530][INFO ][node                     ] [Vampire by Night] initialized
+[2021-05-06 14:34:24,530][INFO ][node                     ] [Vampire by Night] starting ...
+[2021-05-06 14:34:27,019][INFO ][transport                ] [Vampire by Night] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2021-05-06 14:34:27,030][INFO ][discovery                ] [Vampire by Night] elasticsearch/2g6pOiJ3QBGuoL74VzYaUQ
+[2021-05-06 14:34:31,635][INFO ][cluster.service          ] [Vampire by Night] new_master {Vampire by Night}{2g6pOiJ3QBGuoL74VzYaUQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2021-05-06 14:34:32,069][INFO ][gateway                  ] [Vampire by Night] recovered [1] indices into cluster_state
+[2021-05-06 14:34:33,537][INFO ][cluster.routing.allocation] [Vampire by Night] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[haystack][0]] ...]).
+[2021-05-06 14:34:34,322][INFO ][http                     ] [Vampire by Night] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2021-05-06 14:34:34,323][INFO ][node                     ] [Vampire by Night] started
+[2021-05-06 17:08:53,708][INFO ][bootstrap                ] running graceful exit on windows
+[2021-05-06 17:08:53,710][INFO ][node                     ] [Vampire by Night] stopping ...
+[2021-05-06 17:08:53,816][INFO ][node                     ] [Vampire by Night] stopped
+[2021-05-06 17:08:53,816][INFO ][node                     ] [Vampire by Night] closing ...
+[2021-05-06 17:08:53,823][INFO ][node                     ] [Vampire by Night] closed

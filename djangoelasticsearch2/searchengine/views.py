@@ -8103,7 +8103,7 @@ def searchengine_autocomplete_jquery(request):
             results = SearchQuerySet().filter(Q(company=keyword) | Q(company__contains=keyword)).models(models.PersonalInfo).load_all()
 
             page = request.GET.get('page', 1)
-            paginator = Paginator(results, 10)
+            paginator = Paginator(results, 10) 
             try:
                 results = paginator.page(page)
             except PageNotAnInteger:
@@ -8111,10 +8111,16 @@ def searchengine_autocomplete_jquery(request):
             except EmptyPage:
                 results = paginator.page(paginator.num_pages)
 
+            base_url = request.path + f'?search2={keyword}'
+
         else:
+            print("asdasd")
             results = ""
+            base_url = ""
+
     context = {
         'results': results,
+        'base_url': base_url,
     }
 
     return render(request, template_name, context)
